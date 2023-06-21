@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://lp5ix0mm026v"]
+
+[ext_resource type="Script" path="res://dialoge.gd" id="1_xxxdk"]
+[ext_resource type="FontFile" uid="uid://c4p2ytdx1c1kh" path="res://Fonts/F77/F77 Minecraft.ttf" id="2_2bsrq"]
+[ext_resource type="Texture2D" uid="uid://bqwmkcoljx475" path="res://Png/Buyer1.png" id="2_qw0pb"]
+[ext_resource type="Texture2D" uid="uid://bes8qypta51e0" path="res://PngGodot/DialogeButton.png" id="3_mbgxk"]
+[ext_resource type="AudioStream" uid="uid://djc5kao3hti0w" path="res://Audio/dialog sound.wav" id="5_5trdt"]
+
+[node name="Dialoge" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xxxdk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.317647)
+
+[node name="DialogeBox" type="ColorRect" parent="CanvasLayer"]
+offset_left = 56.0
+offset_top = 215.0
+offset_right = 575.0
+offset_bottom = 322.0
+color = Color(0.898039, 0.592157, 0.705882, 1)
+
+[node name="Portrait" type="TextureRect" parent="CanvasLayer/DialogeBox"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = -128.0
+offset_right = 493.0
+texture = ExtResource("2_qw0pb")
+
+[node name="Name" type="RichTextLabel" parent="CanvasLayer/DialogeBox"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 244.0
+offset_bottom = 25.0
+theme_override_fonts/normal_font = ExtResource("2_2bsrq")
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="CanvasLayer/DialogeBox"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 30.0
+offset_right = 490.0
+offset_bottom = 94.0
+scale = Vector2(1, 0.988843)
+theme_override_fonts/normal_font = ExtResource("2_2bsrq")
+text = "text"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/DialogeBox"]
+
+[node name="DialogeButton" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(546, 304)
+texture = ExtResource("3_mbgxk")
+
+[node name="ClearButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 527.0
+offset_top = 294.0
+offset_right = 557.0
+offset_bottom = 311.0
+texture_normal = ExtResource("3_mbgxk")
+
+[node name="Dialog" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_5trdt")
+volume_db = -20.613
+pitch_scale = 1.75
+bus = &"Interface"
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

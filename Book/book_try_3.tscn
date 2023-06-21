@@ -1,0 +1,1289 @@
+[gd_scene load_steps=56 format=3 uid="uid://b6ofq4j7s5tqp"]
+
+[ext_resource type="Script" path="res://Book/CanvasLayer.gd" id="1_nsnrp"]
+[ext_resource type="Texture2D" uid="uid://co7xxmaqq6fmf" path="res://PngGodot/Guidebook/Guidebookopen.png" id="2_i8rbv"]
+[ext_resource type="Script" path="res://Book/QuestControl.gd" id="3_nsk08"]
+[ext_resource type="Texture2D" uid="uid://bc673elpwimfa" path="res://PngGodot/Guidebook/Guidebook.png" id="3_vguqt"]
+[ext_resource type="Texture2D" uid="uid://b6xqofis072g4" path="res://PngGodot/Guidebook/OpenMarkGuidbook/MarlSmall.png" id="4_hf0qr"]
+[ext_resource type="Script" path="res://Book/MarginContainer.gd" id="5_etalh"]
+[ext_resource type="Texture2D" uid="uid://dvl1yaurnqdmi" path="res://PngGodot/Guidebook/OpenMarkGuidbook/MarlBig.png" id="5_qasrp"]
+[ext_resource type="FontFile" uid="uid://c4p2ytdx1c1kh" path="res://Fonts/F77/F77 Minecraft.ttf" id="6_8q53q"]
+[ext_resource type="Script" path="res://Book/Label.gd" id="7_i50r8"]
+[ext_resource type="Texture2D" uid="uid://70uec13he4gv" path="res://PngGodot/Product/Ecg/EcgPaper.png" id="8_1yf12"]
+[ext_resource type="Texture2D" uid="uid://etwrnbtfi2so" path="res://PngGodot/ASK.png" id="8_wcy1v"]
+[ext_resource type="Texture2D" uid="uid://dhwwv0c53lv12" path="res://PngGodot/ASK Active.png" id="9_dsvmc"]
+[ext_resource type="Texture2D" uid="uid://y0xhtol5ty24" path="res://PngGodot/Product/Ecg/EcgPaperActive.png" id="9_pmicm"]
+[ext_resource type="Texture2D" uid="uid://6b4sch51cavy" path="res://PngGodot/Product/Ecg/EcgPaperSlim.png" id="10_qgpt5"]
+[ext_resource type="Texture2D" uid="uid://bmffma84t50p6" path="res://PngGodot/Product/Ecg/EcgPaperSlimActive.png" id="11_4lmf1"]
+[ext_resource type="Texture2D" uid="uid://ps3bk756bspj" path="res://PngGodot/Product/Ecg/EcgGelBig.png" id="12_jth87"]
+[ext_resource type="Texture2D" uid="uid://c7wl16rqxqkrs" path="res://PngGodot/Product/Ecg/EcgGelBigActive.png" id="13_7n84r"]
+[ext_resource type="Texture2D" uid="uid://br8g3ktbihx4c" path="res://PngGodot/Product/Ecg/EcgGel.png" id="14_0jvt8"]
+[ext_resource type="Texture2D" uid="uid://dty8j4a6ehffv" path="res://PngGodot/Product/Ecg/EcgGelActive.png" id="15_x72tt"]
+[ext_resource type="Texture2D" uid="uid://cq672uvkh5pkg" path="res://PngGodot/Product/Uzi/UziGel.png" id="16_82r2x"]
+[ext_resource type="Texture2D" uid="uid://vy4cyog16ll6" path="res://PngGodot/Product/Uzi/UziGelActive.png" id="17_d0sol"]
+[ext_resource type="Texture2D" uid="uid://bl8nydooqok4n" path="res://PngGodot/Product/Uzi/UziPaperUpp-110D.png" id="18_tl3v2"]
+[ext_resource type="Texture2D" uid="uid://dttvsdms8aihq" path="res://PngGodot/Product/Uzi/UziPaperUpp-110DActive.png" id="19_qxtqj"]
+[ext_resource type="Texture2D" uid="uid://c538wt7glqt5q" path="res://PngGodot/Product/Uzi/UziPaperUpp-110S.png" id="20_6aumi"]
+[ext_resource type="Texture2D" uid="uid://btoid5xq6itwe" path="res://PngGodot/Product/Uzi/UziPaperUpp-110sActive.png" id="21_4ebfh"]
+[ext_resource type="Texture2D" uid="uid://dr06eibqxr1gq" path="res://PngGodot/Product/Uzi/UziPaperUpp-110G.png" id="22_iq82c"]
+[ext_resource type="Texture2D" uid="uid://sjk52pgbv5wa" path="res://PngGodot/Product/Uzi/UziPaperUpp-110GActive.png" id="23_6q4s4"]
+[ext_resource type="Texture2D" uid="uid://bs1xf2eapvd1q" path="res://PngGodot/Product/Lamps/LampGermicidal.png" id="24_f2enf"]
+[ext_resource type="Texture2D" uid="uid://tu1v1578uksr" path="res://PngGodot/Product/Lamps/LampGermicidalActive.png" id="25_ukwyj"]
+[ext_resource type="Texture2D" uid="uid://2i8wwtvsb7sl" path="res://PngGodot/Product/Lamps/QuartzHalogenLamp.png" id="26_safbk"]
+[ext_resource type="Texture2D" uid="uid://ch5fvlh5p07rk" path="res://PngGodot/Product/Lamps/QuartzHalogenLampActive.png" id="27_01oup"]
+[ext_resource type="Texture2D" uid="uid://45ps18ik30hj" path="res://PngGodot/Product/Lamps/Ophthalmoscope.png" id="28_is1k2"]
+[ext_resource type="Texture2D" uid="uid://npbd8lcc2sfb" path="res://PngGodot/Product/Lamps/OphthalmoscopeActive.png" id="29_wme1l"]
+[ext_resource type="Texture2D" uid="uid://g0eh4urcirdg" path="res://PngGodot/Product/Lamps/LampEndoscopy.png" id="30_sv25l"]
+[ext_resource type="Texture2D" uid="uid://bvsrg630abv66" path="res://PngGodot/Product/Lamps/LampEndoscopyActive.png" id="31_1dbgr"]
+[ext_resource type="Texture2D" uid="uid://cmgvcfhyoyxac" path="res://PngGodot/Product/Furniture/FurnitureBedsideTable.png" id="32_4ln5q"]
+[ext_resource type="Texture2D" uid="uid://ce0xjtu382q7m" path="res://PngGodot/Product/Furniture/FurnitureBedsideTableActive.png" id="33_wo0q8"]
+[ext_resource type="Texture2D" uid="uid://cd0kqv8f3adtc" path="res://PngGodot/Product/Furniture/FurnitureCloset.png" id="34_txbkk"]
+[ext_resource type="Texture2D" uid="uid://ci3fwhc05hx84" path="res://PngGodot/Product/Furniture/FurnitureClosetActive.png" id="35_1ah00"]
+[ext_resource type="Texture2D" uid="uid://4r3gx6ekbfhl" path="res://PngGodot/Product/Furniture/FurnitureКack.png" id="36_1c4q3"]
+[ext_resource type="Texture2D" uid="uid://cx6bqyj4g5muj" path="res://PngGodot/Product/Furniture/FurnitureКackActive.png" id="37_xdavs"]
+[ext_resource type="Texture2D" uid="uid://cucdudcts4u0b" path="res://PngGodot/Product/Furniture/FurnitureСouch.png" id="38_otifb"]
+[ext_resource type="Texture2D" uid="uid://704jit7736ua" path="res://PngGodot/Product/Furniture/FurnitureСouchActive.png" id="39_2xwj8"]
+[ext_resource type="Texture2D" uid="uid://5itdgbx41yaq" path="res://PngGodot/EKG.png" id="40_f1fgg"]
+[ext_resource type="Texture2D" uid="uid://duxohgsyo1ic3" path="res://PngGodot/CleanFullScrene.png" id="41_khc87"]
+[ext_resource type="Texture2D" uid="uid://cbwqpgviqk12r" path="res://PngGodot/EKG Active.png" id="41_wh2j2"]
+[ext_resource type="Texture2D" uid="uid://dyted1eeykpdq" path="res://PngGodot/UZI.png" id="42_j0bkn"]
+[ext_resource type="Texture2D" uid="uid://b54k3nis7had8" path="res://PngGodot/UZI Active.png" id="43_g0vr1"]
+[ext_resource type="Texture2D" uid="uid://deijavl6r680c" path="res://PngGodot/Analizator.png" id="44_11e3l"]
+[ext_resource type="Texture2D" uid="uid://ccu8gfb6iekow" path="res://PngGodot/Analizator Active.png" id="45_5wxet"]
+[ext_resource type="Texture2D" uid="uid://bgj82cjuqiexa" path="res://PngGodot/Furniture Active.png" id="46_bh7nd"]
+[ext_resource type="Texture2D" uid="uid://bm0xqkqjjm0en" path="res://PngGodot/Furniture.png" id="47_amrat"]
+[ext_resource type="AudioStream" uid="uid://brmj5sod33v1g" path="res://Audio/paperslide.wav" id="52_lemco"]
+[ext_resource type="AudioStream" uid="uid://c76q0b5r400nx" path="res://Audio/DownBook.mp3" id="53_sgnvh"]
+[ext_resource type="AudioStream" uid="uid://bl6bduailory" path="res://Audio/UpBook.mp3" id="54_xxixq"]
+
+[node name="BookTry1" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_nsnrp")
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.490196)
+
+[node name="Exit" type="TextureButton" parent="CanvasLayer"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture_normal = ExtResource("41_khc87")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 116.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_nsk08")
+
+[node name="BookOpen" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 294.0
+texture = ExtResource("2_i8rbv")
+
+[node name="BookClose" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 0)
+texture = ExtResource("3_vguqt")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_bottom = 12
+script = ExtResource("5_etalh")
+
+[node name="EKG" type="Control" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG"]
+layout_mode = 2
+offset_right = 252.0
+offset_bottom = 282.0
+
+[node name="Space 4" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="EKG_QuestButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("8_1yf12")
+texture_hover = ExtResource("9_pmicm")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Бумага для ЭКГ в рулонах"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Рулоны из термобумаги.
+Ширина рулона — 110 мм
+Длина намотки  — 30 м
+"
+
+[node name="EKG_AskButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="EKG_QuestButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("10_qgpt5")
+texture_hover = ExtResource("11_4lmf1")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Бумага для ЭКГ"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Мелованная бумага
+ для электрокардиографа.
+Ширина листа - 110 мм
+Кол-во листов  - 200"
+
+[node name="EKG_AskButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+
+[node name="EKG_QuestButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("12_jth87")
+texture_hover = ExtResource("13_7n84r")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель для ЭКГ высокой
+вязкости 5 кг"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель повышенной вязкости
+для ультразвуковых,
+электрофизиологических
+исследований и терапии."
+
+[node name="EKG_AskButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+
+[node name="EKG_QuestButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("14_0jvt8")
+texture_hover = ExtResource("15_x72tt")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель для ЭКГ низкой 
+вязкости 250 г"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель пониженной вязкости
+для ультразвуковых,
+электрофизиологических 
+исследований и терапии."
+
+[node name="EKG_AskButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="UZI" type="Control" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -141.0
+offset_right = 247.0
+offset_bottom = 141.0
+grow_vertical = 2
+
+[node name="Space 4" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+
+[node name="UZI_QuestButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("16_82r2x")
+texture_hover = ExtResource("17_d0sol")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель для УЗИ, средней
+вязкости 250 г"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Гель для
+ультразвуковых
+исследований,
+допплерографии.
+"
+
+[node name="UZI_AskButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+
+[node name="UZI_QuestButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("18_tl3v2")
+texture_hover = ExtResource("19_qxtqj")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Термобумага Sony 
+UPP-110HD
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Высокоплотная бумага
+для принтеров
+Ширина: 110мм
+Длина: 20 метров"
+
+[node name="UZI_AskButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8"]
+layout_mode = 2
+
+[node name="UZI_QuestButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("20_6aumi")
+texture_hover = ExtResource("21_4ebfh")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Термобумага Sony 
+UPP-110S
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Стандартная бумага
+для принтеров
+Ширина: 110мм
+Длина: 20 метров
+"
+
+[node name="UZI_AskButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9"]
+layout_mode = 2
+
+[node name="UZI_QuestButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("22_iq82c")
+texture_hover = ExtResource("23_6q4s4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Термобумага Sony 
+UPP-110HG
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Глянцевая бумага
+для принтеров
+Ширина: 110мм
+Длина: 18 метров
+"
+
+[node name="UZI_AskButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Analizator" type="Control" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator"]
+layout_mode = 2
+offset_right = 252.0
+offset_bottom = 282.0
+
+[node name="Space 4" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Analiz_QuestButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("24_f2enf")
+texture_hover = ExtResource("25_ukwyj")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампа бактерицидная
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Применяется для
+обеззараживания воздуха
+и поверхностей
+в помещениях.
+"
+
+[node name="Analiz_AskButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Analiz_QuestButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture_normal = ExtResource("26_safbk")
+texture_hover = ExtResource("27_01oup")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампа кварцевая
+галогенная 
+малогабаритная"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Используется в качест-
+ве высокоинтенсивных 
+источников света в
+оптических приборах.
+"
+
+[node name="Analiz_AskButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8"]
+layout_mode = 2
+
+[node name="Analiz_QuestButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture_normal = ExtResource("28_is1k2")
+texture_hover = ExtResource("29_wme1l")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампа для офтольмоскопа"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампа, позволяющая 
+получить узкий луч света.
+применяется вместе со
+специальным микроскопом."
+
+[node name="Analiz_AskButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9"]
+layout_mode = 2
+
+[node name="Analiz_QuestButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture_normal = ExtResource("30_sv25l")
+texture_hover = ExtResource("31_1dbgr")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампы накаливания"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Лампа для освещения.
+Используется в приборах
+освещения."
+
+[node name="Analiz_AskButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="FURNITURE" type="Control" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE"]
+layout_mode = 2
+offset_right = 252.0
+offset_bottom = 282.0
+
+[node name="Space 4" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Furniture_QuestButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("32_4ln5q")
+texture_hover = ExtResource("33_wo0q8")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Тумба"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Тумба с распашными
+дверцами.
+Размер: (80х80х60)см
+Вес: 15кг"
+
+[node name="Furniture_AskButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Furniture_QuestButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("34_txbkk")
+texture_hover = ExtResource("35_1ah00")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Шкаф"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Шкаф с распашными
+дверцами и полками.
+Размер: (80х200х60)см
+Вес: 37кг"
+
+[node name="Furniture_AskButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8"]
+layout_mode = 2
+
+[node name="Furniture_QuestButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("36_1c4q3")
+texture_hover = ExtResource("37_xdavs")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Метталический стеллаж"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Система хранения хранения
+Размер: (120х200х60)см
+Максимальная нагрузка:
+200 кг
+"
+
+[node name="Furniture_AskButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="Space3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9"]
+layout_mode = 2
+
+[node name="Furniture_QuestButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("38_otifb")
+texture_hover = ExtResource("39_2xwj8")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Кушетка"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9"]
+visible = false
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Металлическая кушетка
+с регулируемой спинкой.
+В комплект входит матрас
+Размер: (220х110х80)см"
+
+[node name="Furniture_AskButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("8_wcy1v")
+texture_pressed = ExtResource("8_wcy1v")
+texture_hover = ExtResource("9_dsvmc")
+
+[node name="FAQ" type="Control" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ"]
+layout_mode = 2
+offset_right = 252.0
+offset_bottom = 282.0
+
+[node name="Space 4" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer3"]
+layout_mode = 2
+
+[node name="FAQ_QuestButton1" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("40_f1fgg")
+texture_hover = ExtResource("41_wh2j2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Электрокардиограф - это аппарат,
+исследущий сердечную деятельность,
+по электрическим импульсам образу-
+ющимся в результате работы сердца."
+
+[node name="Space" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer5"]
+layout_mode = 2
+
+[node name="FAQ_QuestButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("42_j0bkn")
+texture_hover = ExtResource("43_g0vr1")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "УЗИ - это аппарат использующий 
+ультразвук для изучения всех 
+внутренних систем организма."
+
+[node name="Space2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer8"]
+layout_mode = 2
+
+[node name="FAQ_QuestButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer8"]
+layout_mode = 2
+texture_normal = ExtResource("44_11e3l")
+texture_hover = ExtResource("45_5wxet")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer8"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Спирометр - это прибор для изме-
+рения функции легких и свойств 
+выдыхаемого воздуха человека."
+
+[node name="Space3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer9"]
+layout_mode = 2
+
+[node name="FAQ_QuestButton5" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer9"]
+layout_mode = 2
+texture_normal = ExtResource("47_amrat")
+texture_hover = ExtResource("46_bh7nd")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer9"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/FAQ/VBoxContainer5/HBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Мебель - для каждого  учереждения 	
+необходима вещь."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("4_hf0qr")
+texture_pressed = ExtResource("5_qasrp")
+texture_hover = ExtResource("5_qasrp")
+texture_disabled = ExtResource("5_qasrp")
+texture_focused = ExtResource("5_qasrp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 19.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = " Для экг"
+script = ExtResource("7_i50r8")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("4_hf0qr")
+texture_pressed = ExtResource("5_qasrp")
+texture_hover = ExtResource("5_qasrp")
+texture_disabled = ExtResource("5_qasrp")
+texture_focused = ExtResource("5_qasrp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 19.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Для узи"
+script = ExtResource("7_i50r8")
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("4_hf0qr")
+texture_pressed = ExtResource("5_qasrp")
+texture_hover = ExtResource("5_qasrp")
+texture_disabled = ExtResource("5_qasrp")
+texture_focused = ExtResource("5_qasrp")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 19.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Спироан-
+ализаторы"
+script = ExtResource("7_i50r8")
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("4_hf0qr")
+texture_pressed = ExtResource("5_qasrp")
+texture_hover = ExtResource("5_qasrp")
+texture_disabled = ExtResource("5_qasrp")
+texture_focused = ExtResource("5_qasrp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 19.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "Мебель"
+script = ExtResource("7_i50r8")
+
+[node name="TextureButton5" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("4_hf0qr")
+texture_pressed = ExtResource("5_qasrp")
+texture_hover = ExtResource("5_qasrp")
+texture_disabled = ExtResource("5_qasrp")
+texture_focused = ExtResource("5_qasrp")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 19.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8q53q")
+theme_override_font_sizes/font_size = 8
+text = "   FAQ"
+script = ExtResource("7_i50r8")
+
+[node name="AskSound" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+stream = ExtResource("52_lemco")
+volume_db = -14.054
+pitch_scale = 1.3
+bus = &"Interface"
+
+[node name="UpBook" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("54_xxixq")
+volume_db = -2.811
+
+[node name="DownBook" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("53_sgnvh")
+
+[node name="ClearButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="CanvasLayer/Exit" to="CanvasLayer" method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3/EKG_QuestButton1" to="CanvasLayer/Control" method="_on_ekg_quest_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer3/EKG_AskButton1" to="CanvasLayer/Control/MarginContainer" method="_on_ekg_ask_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5/EKG_QuestButton2" to="CanvasLayer/Control" method="_on_ekg_quest_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer5/EKG_AskButton2" to="CanvasLayer/Control/MarginContainer" method="_on_ekg_ask_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8/EKG_QuestButton3" to="CanvasLayer/Control" method="_on_ekg_quest_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer8/EKG_AskButton3" to="CanvasLayer/Control/MarginContainer" method="_on_ekg_ask_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9/EKG_QuestButton4" to="CanvasLayer/Control" method="_on_ekg_quest_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/EKG/VBoxContainer/HBoxContainer9/EKG_AskButton4" to="CanvasLayer/Control/MarginContainer" method="_on_ekg_ask_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3/UZI_QuestButton1" to="CanvasLayer/Control" method="_on_uzi_quest_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer3/UZI_AskButton1" to="CanvasLayer/Control/MarginContainer" method="_on_uzi_ask_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5/UZI_QuestButton2" to="CanvasLayer/Control" method="_on_uzi_quest_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer5/UZI_AskButton2" to="CanvasLayer/Control/MarginContainer" method="_on_uzi_ask_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8/UZI_QuestButton3" to="CanvasLayer/Control" method="_on_uzi_quest_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer8/UZI_AskButton3" to="CanvasLayer/Control/MarginContainer" method="_on_uzi_ask_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9/UZI_QuestButton4" to="CanvasLayer/Control" method="_on_uzi_quest_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/UZI/VBoxContainer2/HBoxContainer9/UZI_AskButton4" to="CanvasLayer/Control/MarginContainer" method="_on_uzi_ask_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3/Analiz_QuestButton1" to="CanvasLayer/Control" method="_on_analiz_quest_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer3/Analiz_AskButton1" to="CanvasLayer/Control/MarginContainer" method="_on_analiz_ask_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5/Analiz_QuestButton2" to="CanvasLayer/Control" method="_on_analiz_quest_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer5/Analiz_AskButton2" to="CanvasLayer/Control/MarginContainer" method="_on_analiz_ask_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8/Analiz_QuestButton3" to="CanvasLayer/Control" method="_on_analiz_quest_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer8/Analiz_AskButton3" to="CanvasLayer/Control/MarginContainer" method="_on_analiz_ask_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9/Analiz_QuestButton4" to="CanvasLayer/Control" method="_on_analiz_quest_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Analizator/VBoxContainer3/HBoxContainer9/Analiz_AskButton4" to="CanvasLayer/Control/MarginContainer" method="_on_analiz_ask_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3/Furniture_QuestButton1" to="CanvasLayer/Control" method="_on_furniture_quest_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer3/Furniture_AskButton1" to="CanvasLayer/Control/MarginContainer" method="_on_furniture_ask_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5/Furniture_QuestButton2" to="CanvasLayer/Control" method="_on_furniture_quest_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer5/Furniture_AskButton2" to="CanvasLayer/Control/MarginContainer" method="_on_furniture_ask_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8/Furniture_QuestButton3" to="CanvasLayer/Control" method="_on_furniture_quest_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer8/Furniture_AskButton3" to="CanvasLayer/Control/MarginContainer" method="_on_furniture_ask_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9/Furniture_QuestButton4" to="CanvasLayer/Control" method="_on_furniture_quest_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/FURNITURE/VBoxContainer4/HBoxContainer9/Furniture_AskButton4" to="CanvasLayer/Control/MarginContainer" method="_on_furniture_ask_button_4_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton/Label" method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton/Label" method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton/Label" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton/Label" method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton/Label" method="_on_texture_button_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2/Label" method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2/Label" method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2/Label" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2/Label" method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer" method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton2/Label" method="_on_texture_button_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3/Label" method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3/Label" method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3/Label" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3/Label" method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer" method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton3/Label" method="_on_texture_button_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4/Label" method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4/Label" method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4/Label" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4/Label" method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer" method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton4/Label" method="_on_texture_button_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5/Label" method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5/Label" method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5/Label" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5/Label" method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer" method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5" to="CanvasLayer/Control/MarginContainer/HBoxContainer/TextureButton5/Label" method="_on_texture_button_pressed"]

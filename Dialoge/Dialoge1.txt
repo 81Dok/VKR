@@ -1,0 +1,29 @@
+[
+{"Name":"Afely", "Text": "Hello, im a gay"}
+]
+
+extends Control
+
+var dialog = ["Светлана", "Здравствуйте, мне нужна бумага для экг размера 10*10","adasdasd","sadasd", "Four", "Six"]
+
+var dialog_index = 0
+var finished = false
+
+func _ready():
+	$CanvasLayer/ClearButton.grab_focus()
+	load_dialog()
+	
+
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		load_dialog()
+
+func load_dialog():
+	if dialog_index < dialog.size():
+		$CanvasLayer/DialogeBox/Name.bbcode_text = dialog[dialog_index]
+		dialog_index += 1
+		$CanvasLayer/DialogeBox/Text.bbcode_text = dialog[dialog_index]
+		dialog_index += 1
+	else:
+		$".".queue_free()

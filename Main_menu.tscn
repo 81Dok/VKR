@@ -1,0 +1,234 @@
+[gd_scene load_steps=8 format=3 uid="uid://glclmoi3pbkb"]
+
+[ext_resource type="Texture2D" uid="uid://dxy3j7dewm5ob" path="res://PngGodot/MainMenu.png" id="1_7mqni"]
+[ext_resource type="Script" path="res://Main_menu.gd" id="1_vtync"]
+[ext_resource type="FontFile" uid="uid://c4p2ytdx1c1kh" path="res://Fonts/F77/F77 Minecraft.ttf" id="2_0i8hi"]
+[ext_resource type="Script" path="res://music.gd" id="4_ghlv2"]
+[ext_resource type="Texture2D" uid="uid://duxohgsyo1ic3" path="res://PngGodot/CleanFullScrene.png" id="4_q5vav"]
+[ext_resource type="AudioStream" uid="uid://n1qg76jpuep4" path="res://Audio/tap sound.wav" id="5_obny4"]
+[ext_resource type="AudioStream" uid="uid://blgi1cgia67v0" path="res://Audio/lose.wav" id="7_8hdqy"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtync")
+
+[node name="QueueExit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_force_pass_scroll_events = false
+texture_normal = ExtResource("4_q5vav")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.282353)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -130.0
+offset_right = 100.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7mqni")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 23.0
+offset_right = 178.0
+offset_bottom = 159.0
+
+[node name="Continue" type="Button" parent="CanvasLayer/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Продолжить"
+
+[node name="NewGame" type="Button" parent="CanvasLayer/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Новая игра"
+
+[node name="Options" type="Button" parent="CanvasLayer/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Настройки"
+
+[node name="Training" type="Button" parent="CanvasLayer/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Обучение"
+
+[node name="Exit" type="Button" parent="CanvasLayer/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Выход"
+
+[node name="sound options1" type="PanelContainer" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -120.0
+offset_right = 82.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sound options" type="VBoxContainer" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 2
+offset_left = 233.0
+offset_top = 61.0
+offset_right = 405.0
+offset_bottom = 220.0
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Общий звук"
+
+[node name="master" type="HSlider" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+script = ExtResource("4_ghlv2")
+bus_name = "Master"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Музыка"
+
+[node name="music" type="HSlider" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+script = ExtResource("4_ghlv2")
+bus_name = "Music"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Интерфейс"
+
+[node name="sfx" type="HSlider" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+script = ExtResource("4_ghlv2")
+bus_name = "Interface"
+
+[node name="Back" type="Button" parent="CanvasLayer/Control/sound options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Назад"
+
+[node name="WinorLose" type="Control" parent="CanvasLayer/Control"]
+visible = false
+anchors_preset = 0
+offset_left = 230.0
+offset_top = 59.0
+offset_right = 409.0
+offset_bottom = 219.0
+
+[node name="LabelLose" type="Label" parent="CanvasLayer/Control/WinorLose"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_right = 184.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("2_0i8hi")
+theme_override_font_sizes/font_size = 16
+text = "Здравствуйте вы
+не прошли стажи-
+ровку заберите 
+свои вещи в тече-
+нии дня! 
+     Досвидания.
+       "
+
+[node name="LabelWin" type="RichTextLabel" parent="CanvasLayer/Control/WinorLose"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_right = 184.0
+offset_bottom = 111.0
+theme_override_fonts/normal_font = ExtResource("2_0i8hi")
+text = "Здравствуйте вы
+прошли стажировку и будете наняты в нашу компанию! Ждем вас 
+завтра в 8:00. Досвидания!
+      "
+
+[node name="EndButton" type="Button" parent="CanvasLayer/Control/WinorLose"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 119.0
+offset_right = 175.0
+offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("2_0i8hi")
+text = "Главное меню"
+
+[node name="UISound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_obny4")
+volume_db = -21.55
+pitch_scale = 2.26
+bus = &"Interface"
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_8hdqy")
+bus = &"Interface"
+
+[connection signal="pressed" from="QueueExit" to="." method="_on_queue_exit_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Continue" to="." method="_on_continue_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Continue" to="." method="_on_continue_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureRect/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/NewGame" to="." method="_on_new_game_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/NewGame" to="." method="_on_new_game_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureRect/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Options" to="." method="_on_options_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Options" to="." method="_on_options_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureRect/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Training" to="." method="_on_training_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Training" to="." method="_on_training_mouse_entered"]
+[connection signal="focus_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Exit" to="." method="_on_exit_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/TextureRect/VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Control/TextureRect/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/sound options/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/WinorLose/EndButton" to="." method="_on_end_button_pressed"]

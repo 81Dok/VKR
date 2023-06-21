@@ -1,0 +1,243 @@
+[gd_scene load_steps=18 format=3 uid="uid://vsxff7tpy66h"]
+
+[ext_resource type="Script" path="res://BookAndPhone.gd" id="1_0o64q"]
+[ext_resource type="Script" path="res://CloudLayer.gd" id="1_6t3qa"]
+[ext_resource type="Texture2D" uid="uid://bsfs4r0i45ql3" path="res://PngGodot/BackgroundCloud.png" id="2_osb3s"]
+[ext_resource type="Texture2D" uid="uid://bk6gnmxoekxg7" path="res://PngGodot/BackgroundForCloud.png" id="3_wiyot"]
+[ext_resource type="Texture2D" uid="uid://ms0apob5tlww" path="res://PngGodot/Telephone.png" id="4_8odb7"]
+[ext_resource type="FontFile" uid="uid://c4p2ytdx1c1kh" path="res://Fonts/F77/F77 Minecraft.ttf" id="5_is0d2"]
+[ext_resource type="Texture2D" uid="uid://vk12j8pqtlgu" path="res://PngGodot/TelephoneActive.png" id="5_klxhw"]
+[ext_resource type="Texture2D" uid="uid://k1dlkn7owkii" path="res://PngGodot/BookOnATabel.png" id="6_n1m15"]
+[ext_resource type="Texture2D" uid="uid://dr227o6eg54bw" path="res://PngGodot/BookOnATabelActive.png" id="7_ofwuc"]
+[ext_resource type="Texture2D" uid="uid://b8w7r5d6bekcp" path="res://PngGodot/PhoneActiveBonus.png" id="7_t6jmw"]
+[ext_resource type="Script" path="res://PhoneActive.gd" id="8_uh0b2"]
+[ext_resource type="Texture2D" uid="uid://ce58x7rf5b5s6" path="res://PngGodot/SmartPhone.png" id="10_u8bhp"]
+[ext_resource type="Texture2D" uid="uid://bwvpmt6666hae" path="res://PngGodot/SmartPhone Active.png" id="11_kskew"]
+[ext_resource type="AudioStream" uid="uid://dokevds4vkxsl" path="res://Audio/StaticSound.mp3" id="12_emgnl"]
+[ext_resource type="AudioStream" uid="uid://caakias41wv0m" path="res://Audio/RingTon.mp3" id="13_qb43y"]
+[ext_resource type="AudioStream" uid="uid://btrhtrl75l8hx" path="res://Audio/win.wav" id="16_7nqa8"]
+[ext_resource type="AudioStream" uid="uid://blgi1cgia67v0" path="res://Audio/lose.wav" id="17_mpgl0"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0o64q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+script = ExtResource("1_6t3qa")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_osb3s")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_wiyot")
+
+[node name="Telephone" type="TextureButton" parent="CanvasLayer"]
+offset_left = 547.0
+offset_top = 97.0
+offset_right = 615.0
+offset_bottom = 193.0
+texture_normal = ExtResource("4_8odb7")
+texture_hover = ExtResource("5_klxhw")
+texture_disabled = ExtResource("4_8odb7")
+
+[node name="PhoneActive" type="TextureRect" parent="CanvasLayer/Telephone"]
+visible = false
+layout_mode = 0
+offset_left = 38.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 25.0
+texture = ExtResource("7_t6jmw")
+script = ExtResource("8_uh0b2")
+
+[node name="Guidebook" type="TextureButton" parent="CanvasLayer"]
+offset_left = 12.0
+offset_top = 152.0
+offset_right = 134.0
+offset_bottom = 242.0
+texture_normal = ExtResource("6_n1m15")
+texture_hover = ExtResource("7_ofwuc")
+texture_disabled = ExtResource("6_n1m15")
+
+[node name="ButtonDisabler" type="ColorRect" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(640, 360)
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(1, 1, 1, 0.768627)
+
+[node name="SmartPhone" type="TextureButton" parent="CanvasLayer"]
+offset_left = 115.0
+offset_top = 64.0
+offset_right = 167.0
+offset_bottom = 146.0
+texture_normal = ExtResource("10_u8bhp")
+texture_hover = ExtResource("11_kskew")
+
+[node name="DebugTool" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 42.0
+offset_right = 108.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("5_is0d2")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="ScoreLabel2" type="Label" parent="."]
+visible = false
+offset_left = 28.0
+offset_top = 103.0
+offset_right = 96.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("5_is0d2")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="ScoreLabel2"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -26.0
+offset_right = 120.0
+text = "№ квеста"
+
+[node name="Misstake" type="Label" parent="."]
+visible = false
+offset_left = 4.0
+offset_top = 322.0
+offset_right = 72.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("5_is0d2")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Misstake"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = -4.0
+text = "Ошибок"
+
+[node name="BigMiss" type="Label" parent="."]
+visible = false
+offset_left = 104.0
+offset_top = 323.0
+offset_right = 172.0
+offset_bottom = 358.0
+theme_override_fonts/font = ExtResource("5_is0d2")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BigMiss"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = -4.0
+text = "Больших ошибок"
+
+[node name="RandomQuest" type="Label" parent="."]
+visible = false
+offset_left = 265.0
+offset_top = 319.0
+offset_right = 333.0
+offset_bottom = 354.0
+theme_override_fonts/font = ExtResource("5_is0d2")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="RandomQuest"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = -4.0
+text = "RandomQuest"
+
+[node name="GameSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("12_emgnl")
+volume_db = -44.037
+pitch_scale = 1.4
+bus = &"Music"
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("16_7nqa8")
+bus = &"Interface"
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("17_mpgl0")
+bus = &"Interface"
+
+[node name="PhoneRing" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_qb43y")
+volume_db = -33.816
+pitch_scale = 1.21
+bus = &"Interface"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 501.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 75.0
+text = "Win"
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+offset_left = 400.0
+offset_top = 281.0
+offset_right = 486.0
+offset_bottom = 338.0
+text = "Lose"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 497.0
+offset_top = 285.0
+offset_right = 616.0
+offset_bottom = 340.0
+text = "RandomQuest"
+
+[connection signal="pressed" from="CanvasLayer/Telephone" to="." method="_on_telephone_pressed"]
+[connection signal="pressed" from="CanvasLayer/Guidebook" to="." method="_on_guidebook_pressed"]
+[connection signal="pressed" from="CanvasLayer/SmartPhone" to="." method="_on_smart_phone_pressed"]
+[connection signal="finished" from="PhoneRing" to="CanvasLayer/Telephone/PhoneActive" method="_on_phone_ring_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
